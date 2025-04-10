@@ -1,7 +1,8 @@
 .movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 1.25rem;
-    transition: all 0.3s ease-in-out;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: start;
+  padding-bottom: 2rem;
+}

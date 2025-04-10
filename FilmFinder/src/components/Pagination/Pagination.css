@@ -1,0 +1,68 @@
+/* src/styles/Pagination.css */
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    flex-direction: row;
+  }
+  
+  .pagination button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .pagination button:hover:not(:disabled) {
+    background-color: #ffe9cc;
+    border-color: #ffae42;
+    color: #cc6600;
+  }
+  
+  .pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination .active-page {
+    background-color: #ffae42;
+    color: #fff;
+    font-weight: bold;
+    border-color: #ff9900;
+  }
+  
+  .page-input-form {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  .page-input {
+    width: 80px;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .page-input-form button {
+    padding: 0.4rem 0.8rem;
+    background-color: #fff3e0;
+    border: 1px solid #ffae42;
+    color: #cc6600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .page-input-form button:hover {
+    background-color: #ffd699;
+    color: #000;
+  }
