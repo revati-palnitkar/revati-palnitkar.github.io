@@ -3,7 +3,8 @@
 **For Local Setup**
 
 1. Create .env and add TMDB api key.
-2. Install Dependencies and run
+2. Install Dependencies and replace the key placeholder in .env file with TMDB API Key.
+3. Run npm start
 
 
 
