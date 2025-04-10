@@ -4,6 +4,7 @@ import { fetchMovies } from "../utils/api";
 import SearchBar from "../components/SearchBar/SearchBar";
 import CategoryTabs from "../components/CategoryTabs/CategoryTabs";
 import MovieGrid from "../components/MovieGrid/MovieGrid";
+import Pagination from "../components/Pagination/Pagination";
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
@@ -25,7 +26,7 @@ const Dashboard = () => {
   }, [page, category, searchTerm]);
 
   useEffect(() => {
-    setPage(1); // Reset to first page when category or search term changes
+    setPage(1);
   }, [category, searchTerm]);
 
   useEffect(() => {
@@ -34,9 +35,13 @@ const Dashboard = () => {
       setError(null);
       try {
         const data = await fetchMovies(category, searchTerm, page);
+        if (!data || !data.results) {
+          throw new Error("No data returned from API");
+        }
         setMovies(data.results);
-        setTotalPages(data.total_pages);
+        setTotalPages(data.total_pages || 1);
       } catch (err) {
+        console.error("Error loading movies:", err);
         setError("Failed to load movies");
       } finally {
         setLoading(false);
@@ -45,14 +50,6 @@ const Dashboard = () => {
 
     loadMovies();
   }, [category, searchTerm, page]);
-
-  const handlePrevPage = () => {
-    if (page > 1) setPage((prev) => prev - 1);
-  };
-
-  const handleNextPage = () => {
-    if (page < totalPages) setPage((prev) => prev + 1);
-  };
 
   return (
     <div className="container">
@@ -65,17 +62,11 @@ const Dashboard = () => {
 
       <MovieGrid movies={movies} category={category} searchTerm={searchTerm} page={page} />
 
-      <div className="pagination">
-        <button onClick={handlePrevPage} disabled={page === 1}>
-          Previous
-        </button>
-        <span>
-          Page {page} of {totalPages}
-        </span>
-        <button onClick={handleNextPage} disabled={page === totalPages}>
-          Next
-        </button>
-      </div>
+      <Pagination
+        page={page}
+        setPage={setPage}
+        totalPages={totalPages}
+      />
     </div>
   );
 };

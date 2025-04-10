@@ -51,37 +51,3 @@
     align-items: center;
     gap: 0.5rem;
   }
-
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .pagination button {
-    background-color: #ff4b2b;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .pagination button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .pagination button:hover:not(:disabled) {
-    background-color: #e63900;
-  }
-  
-  .pagination span {
-    font-weight: 500;
-    color: var(--text-color);
-  }
-  
