@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+  color: #111;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+button.theme-toggle {
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background: #e4e4e4;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+body.dark button.theme-toggle {
+  background: #333;
+  color: #fff;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.filters input {
+  padding: 0.5rem;
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  background-color: #fff;
+}
+
+body.dark .filters input {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+.tabs button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.tabs button:hover {
+  background-color: #ccc;
+}
+
+.tabs button.active {
+  background: #999;
+  color: white;
+}
+
+body.dark .tabs button {
+  background: #333;
+  color: #fff;
+}
+
+body.dark .tabs button.active {
+  background: #555;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+body.dark .movie-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.movie-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.movie-details {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+body.dark .movie-details {
+  background-color: #1c1c1c;
+}
+.gradient-text {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 1rem;
+}

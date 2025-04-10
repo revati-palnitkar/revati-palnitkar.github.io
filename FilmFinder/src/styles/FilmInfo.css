@@ -1,0 +1,85 @@
+/* styles/FilmInfo.css */
+
+.movie-details-card {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
+  }
+  
+  .movie-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(90deg, #ff4e50, #f9d423);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .movie-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .movie-poster {
+    width: 200px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-info {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .movie-info p {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.25rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .movie-details-card {
+      padding: 1.5rem 1rem;
+    }
+  
+    .movie-title {
+      font-size: 1.75rem;
+    }
+  
+    .movie-poster {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+    }
+  
+    .movie-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .movie-info {
+      width: 100%;
+    }
+  }
+  
