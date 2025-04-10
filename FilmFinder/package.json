@@ -8,7 +8,8 @@
     "test": "jest",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "postinstall": "cp .env.example .env || echo '.env already exists'"
   },
   "dependencies": {
     "lucide-react": "^0.268.0",
